@@ -122,11 +122,11 @@ const ScholarshipDetails: React.FC = () => {
                 <p className="font-label-sm text-error font-bold tracking-wide uppercase">Deadline Approaching</p>
                 <p className="font-headline-sm text-on-surface">Closes: Sep 06, 2024</p>
               </div>
-              <button className="w-full py-3.5 px-4 bg-primary-container text-on-primary-container rounded-xl font-label-bold text-base hover:opacity-90 hover:shadow-md transition-all shadow-sm flex justify-center items-center gap-2">
+              <button onClick={() => alert('Apply Now triggered')} className="w-full py-3.5 px-4 bg-primary-container text-on-primary-container rounded-xl font-label-bold text-base hover:opacity-90 hover:shadow-md transition-all shadow-sm flex justify-center items-center gap-2">
                 Apply Now
                 <span className="material-symbols-outlined text-sm">open_in_new</span>
               </button>
-              <button className="w-full py-3 px-4 bg-transparent text-primary-container border-2 border-primary-container/20 rounded-xl font-label-bold hover:bg-primary-container/5 transition-colors flex justify-center items-center gap-2">
+              <button onClick={() => alert('Save for Later triggered')} className="w-full py-3 px-4 bg-transparent text-primary-container border-2 border-primary-container/20 rounded-xl font-label-bold hover:bg-primary-container/5 transition-colors flex justify-center items-center gap-2">
                 <span className="material-symbols-outlined text-lg">bookmark_border</span>
                 Save for Later
               </button>

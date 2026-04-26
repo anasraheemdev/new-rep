@@ -19,7 +19,7 @@ const DocumentsHub: React.FC = () => {
         </div>
 
         {/* Global Upload Zone (Drag & Drop) */}
-        <div className="w-full bg-surface-container-lowest border-2 border-dashed border-primary/30 rounded-xl p-xl flex flex-col items-center justify-center text-center gap-md cursor-pointer hover:bg-primary-fixed/30 transition-colors shadow-[0px_4px_20px_rgba(0,0,0,0.05)] group">
+        <div onClick={() => alert('Global file upload triggered')} className="w-full bg-surface-container-lowest border-2 border-dashed border-primary/30 rounded-xl p-xl flex flex-col items-center justify-center text-center gap-md cursor-pointer hover:bg-primary-fixed/30 transition-colors shadow-[0px_4px_20px_rgba(0,0,0,0.05)] group">
           <div className="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
             <span className="material-symbols-outlined text-3xl">cloud_upload</span>
           </div>
@@ -96,7 +96,7 @@ const DocumentsHub: React.FC = () => {
                     <p className="font-label-sm text-label-sm text-error font-medium mt-1">IELTS/TOEFL required by Nov 1</p>
                   </div>
                 </div>
-                <button className="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
+                <button onClick={() => alert('Language Certificate upload triggered')} className="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
                   Upload
                 </button>
               </div>
@@ -112,7 +112,7 @@ const DocumentsHub: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 gap-md">
             {/* Document Card 4: Missing/Upload Prompt inside category */}
-            <div className="bg-surface-container-lowest rounded-xl p-md border border-dashed border-outline-variant flex flex-col gap-sm items-center justify-center py-lg cursor-pointer hover:bg-surface-container-low transition-colors">
+            <div onClick={() => alert('Blocked Account upload triggered')} className="bg-surface-container-lowest rounded-xl p-md border border-dashed border-outline-variant flex flex-col gap-sm items-center justify-center py-lg cursor-pointer hover:bg-surface-container-low transition-colors">
               <span className="material-symbols-outlined text-outline text-3xl mb-1">add_circle</span>
               <h3 className="font-label-bold text-label-bold text-on-surface">Blocked Account Confirmation</h3>
               <p className="font-label-sm text-label-sm text-outline">Required for Visa Phase</p>

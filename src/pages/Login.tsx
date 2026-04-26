@@ -52,7 +52,7 @@ const Login: React.FC = () => {
             <div className="flex flex-col gap-xs">
               <div className="flex items-center justify-between">
                 <label className="font-label-bold text-label-bold text-on-surface-variant" htmlFor="password">Password</label>
-                <a className="font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors" href="#">Forgot Password?</a>
+                <button type="button" onClick={() => alert('Forgot password flow triggered')} className="font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors">Forgot Password?</button>
               </div>
               <div className="relative">
                 <span className="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">
@@ -88,6 +88,7 @@ const Login: React.FC = () => {
           <button
             className="w-full h-12 bg-surface-container-lowest border border-outline-variant text-on-surface rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-sm hover:bg-surface-container-low transition-colors"
             type="button"
+            onClick={() => alert('Google login triggered')}
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>

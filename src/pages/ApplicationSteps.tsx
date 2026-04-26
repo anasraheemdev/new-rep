@@ -22,7 +22,7 @@ const ApplicationSteps: React.FC = () => {
             <p className="font-label-sm text-label-sm text-on-surface-variant">You're on track for the Fall semester.</p>
           </div>
         </div>
-        <button className="hidden sm:flex px-md py-sm bg-surface-container-high hover:bg-surface-dim transition-colors rounded-lg font-label-bold text-label-bold text-on-surface items-center gap-xs">
+        <button onClick={() => alert('Overview triggered')} className="hidden sm:flex px-md py-sm bg-surface-container-high hover:bg-surface-dim transition-colors rounded-lg font-label-bold text-label-bold text-on-surface items-center gap-xs">
           <span className="material-symbols-outlined text-sm">visibility</span>
           Overview
         </button>
@@ -101,7 +101,7 @@ const ApplicationSteps: React.FC = () => {
               </p>
 
               {/* Instructional Video Placeholder */}
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container border border-outline-variant group cursor-pointer">
+              <div onClick={() => alert('Video player triggered')} className="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container border border-outline-variant group cursor-pointer">
                 <img
                   className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKba31elCdF0pdkvTMdYqKNK5cF46eRymTEN4Dl09hesVIw3SOZ98uQZ83gWU3EY5kOS_0WcS7pCzAXb4_IqLdL8HvklNvppWJHNiGzhHKuxn-oexpNEa5kbsFVHZE1zP1DOHTSMMnFLV1y72CnX059psf0Np-uHh52zUMMH7sQCXETBYfaEUc7TP5YAw6SDybP7fHaNR8ztUrZwd1AIQxGvXvtVgyLXo69nCdhH3blUJbO0a3TmWOiRTuDHesu_j96HVEbLWShkSk"
@@ -135,7 +135,7 @@ const ApplicationSteps: React.FC = () => {
                 </ul>
 
                 {/* Dropzone */}
-                <div className="border-2 border-dashed border-outline-variant hover:border-primary transition-colors rounded-lg p-md flex flex-col items-center justify-center text-center cursor-pointer bg-surface-container-lowest">
+                <div onClick={() => alert('File upload triggered')} className="border-2 border-dashed border-outline-variant hover:border-primary transition-colors rounded-lg p-md flex flex-col items-center justify-center text-center cursor-pointer bg-surface-container-lowest">
                   <span className="material-symbols-outlined text-outline mb-xs">cloud_upload</span>
                   <p className="font-label-bold text-label-bold text-on-surface">Click to upload or drag and drop</p>
                   <p className="font-label-sm text-label-sm text-on-surface-variant mt-1">PDF, JPG up to 5MB</p>
@@ -144,11 +144,11 @@ const ApplicationSteps: React.FC = () => {
 
               {/* Action Bar */}
               <div className="flex flex-col sm:flex-row items-center gap-sm pt-sm">
-                <button className="w-full sm:w-auto px-lg py-sm bg-primary hover:bg-surface-tint text-on-primary rounded-lg font-label-bold text-label-bold shadow-sm transition-all flex items-center justify-center gap-xs">
+                <button onClick={() => alert('Mark as Completed triggered')} className="w-full sm:w-auto px-lg py-sm bg-primary hover:bg-surface-tint text-on-primary rounded-lg font-label-bold text-label-bold shadow-sm transition-all flex items-center justify-center gap-xs">
                   <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
                   Mark as Completed
                 </button>
-                <button className="w-full sm:w-auto px-lg py-sm border border-outline-variant text-on-surface hover:bg-surface-container rounded-lg font-label-bold text-label-bold transition-all">
+                <button onClick={() => alert('Need Help triggered')} className="w-full sm:w-auto px-lg py-sm border border-outline-variant text-on-surface hover:bg-surface-container rounded-lg font-label-bold text-label-bold transition-all">
                   Need Help?
                 </button>
               </div>

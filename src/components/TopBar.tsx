@@ -30,13 +30,13 @@ const TopBar: React.FC = () => {
         <h2 className="hidden md:block font-headline-sm text-headline-sm text-on-surface">{getPageTitle()}</h2>
       </div>
       <div className="flex items-center gap-4">
-        <button className="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full hidden md:block">
+        <button onClick={() => alert('Search clicked')} className="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full hidden md:block">
           <span className="material-symbols-outlined">search</span>
         </button>
-        <button className="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+        <button onClick={() => alert('Notifications clicked')} className="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
           <span className="material-symbols-outlined">notifications</span>
         </button>
-        <div className="h-8 w-8 rounded-full bg-slate-200 border border-slate-300 overflow-hidden cursor-pointer shadow-sm">
+        <div onClick={() => alert('Profile clicked')} className="h-8 w-8 rounded-full bg-slate-200 border border-slate-300 overflow-hidden cursor-pointer shadow-sm">
            <img alt="User profile" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh5pReFo24a2xO4_KrvKbuShF8iOVNiO5BwtH_zkC0uG_bOFzpZ8uJK20wqkH3EWmmvEaUqN48G04czGob4yIH07SdqQejuVm65Zix69TLs9UWknTyxK7BDgvjD7AIOuFmhFeLT1UgnXoXykz5OZcY48Wz7THLkneuIpD5wrIG_RWjPQ0gHzwq7QxGSdN_piN5QeVEoUTk3F7aPHxnUTFuVnSEr_DJiEpt7BVYJc_LZp_YBGJt3uKvNFFrLRBDZWH8fnFVBpf8W-M0" />
         </div>
       </div>

@@ -18,21 +18,22 @@ const Universities: React.FC = () => {
               className="w-full pl-10 pr-4 py-3 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface placeholder:text-outline/70"
               placeholder="Search universities or programs..."
               type="text"
+              onChange={() => console.log('Search query changed')}
             />
           </div>
           <div className="grid grid-cols-2 md:flex gap-3 w-full md:w-auto">
-            <select className="py-3 px-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface appearance-none pr-10 relative">
+            <select onChange={(e) => alert(`Country filter changed to ${e.target.value}`)} className="py-3 px-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface appearance-none pr-10 relative">
               <option value="">Country</option>
               <option value="de">Germany</option>
               <option value="it">Italy</option>
               <option value="fr">France</option>
             </select>
-            <select className="py-3 px-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface appearance-none pr-10">
+            <select onChange={(e) => alert(`Degree filter changed to ${e.target.value}`)} className="py-3 px-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface appearance-none pr-10">
               <option value="">Degree</option>
               <option value="bachelor">Bachelor's</option>
               <option value="master">Master's</option>
             </select>
-            <select className="py-3 px-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface appearance-none pr-10">
+            <select onChange={(e) => alert(`Budget filter changed to ${e.target.value}`)} className="py-3 px-4 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md text-on-surface appearance-none pr-10">
               <option value="">Budget</option>
               <option value="0">€0 (Public)</option>
               <option value="5k">&lt; €5,000/yr</option>

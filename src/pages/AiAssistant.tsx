@@ -99,15 +99,15 @@ const AiAssistant: React.FC = () => {
         <div className="p-md md:p-lg bg-surface-container-lowest border-t border-outline-variant/20 z-10 relative">
           {/* Quick Prompts Row */}
           <div className="flex overflow-x-auto pb-3 mb-2 gap-2 no-scrollbar -mx-md px-md md:mx-0 md:px-0">
-            <button className="whitespace-nowrap flex items-center gap-1.5 px-4 py-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-colors flex-shrink-0">
+            <button onClick={() => alert('Quick prompt: IELTS requirement for Italy?')} className="whitespace-nowrap flex items-center gap-1.5 px-4 py-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-colors flex-shrink-0">
               <span className="material-symbols-outlined text-[16px]">search</span>
               IELTS requirement for Italy?
             </button>
-            <button className="whitespace-nowrap flex items-center gap-1.5 px-4 py-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-colors flex-shrink-0">
+            <button onClick={() => alert('Quick prompt: Book visa appointment for Germany')} className="whitespace-nowrap flex items-center gap-1.5 px-4 py-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-colors flex-shrink-0">
               <span className="material-symbols-outlined text-[16px]">event</span>
               Book visa appointment for Germany
             </button>
-            <button className="whitespace-nowrap flex items-center gap-1.5 px-4 py-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-colors flex-shrink-0">
+            <button onClick={() => alert('Quick prompt: Blocked account setup')} className="whitespace-nowrap flex items-center gap-1.5 px-4 py-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-colors flex-shrink-0">
               <span className="material-symbols-outlined text-[16px]">euro_symbol</span>
               Blocked account setup
             </button>
@@ -115,7 +115,7 @@ const AiAssistant: React.FC = () => {
 
           {/* Input Field */}
           <div className="relative flex items-end gap-2 bg-surface-bright border border-outline-variant/40 rounded-xl p-2 focus-within:border-primary-container focus-within:ring-2 focus-within:ring-primary-container/20 transition-all shadow-sm">
-            <button className="p-2 text-outline hover:text-primary-container rounded-lg transition-colors flex-shrink-0">
+            <button onClick={() => alert('Attach file triggered')} className="p-2 text-outline hover:text-primary-container rounded-lg transition-colors flex-shrink-0">
               <span className="material-symbols-outlined">attach_file</span>
             </button>
             <textarea
@@ -124,7 +124,7 @@ const AiAssistant: React.FC = () => {
               rows={1}
               style={{ height: '48px' }}
             ></textarea>
-            <button className="p-3 bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary rounded-lg transition-colors shadow-[0_2px_8px_rgba(26,115,232,0.2)] flex-shrink-0 mb-[2px] mr-[2px]">
+            <button onClick={() => alert('Send message triggered')} className="p-3 bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary rounded-lg transition-colors shadow-[0_2px_8px_rgba(26,115,232,0.2)] flex-shrink-0 mb-[2px] mr-[2px]">
               <span className="material-symbols-outlined">send</span>
             </button>
           </div>

@@ -21,7 +21,7 @@ const Scholarships: React.FC = () => {
             <span className="font-label-sm text-on-surface">Masters</span>
             <button className="flex items-center"><span className="material-symbols-outlined text-[16px]">close</span></button>
           </div>
-          <button className="font-label-sm text-primary-container px-2 py-1.5 hover:underline">Clear all</button>
+          <button onClick={() => alert('Clear all filters triggered')} className="font-label-sm text-primary-container px-2 py-1.5 hover:underline">Clear all</button>
         </div>
 
         {/* Scholarship Cards List */}
@@ -125,15 +125,15 @@ const Scholarships: React.FC = () => {
             <h3 className="font-label-bold text-on-surface mb-3">Destination Country</h3>
             <div className="flex flex-col gap-2">
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" defaultChecked />
+                <input onChange={() => alert('Filter Italy toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" defaultChecked />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">Italy</span>
               </label>
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
+                <input onChange={() => alert('Filter Germany toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">Germany</span>
               </label>
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
+                <input onChange={() => alert('Filter France toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">France</span>
               </label>
             </div>
@@ -146,11 +146,11 @@ const Scholarships: React.FC = () => {
             <h3 className="font-label-bold text-on-surface mb-3">Degree Level</h3>
             <div className="flex flex-col gap-2">
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
+                <input onChange={() => alert('Filter Bachelors toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">Bachelors</span>
               </label>
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" defaultChecked />
+                <input onChange={() => alert('Filter Masters toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" defaultChecked />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">Masters</span>
               </label>
             </div>
@@ -163,11 +163,11 @@ const Scholarships: React.FC = () => {
             <h3 className="font-label-bold text-on-surface mb-3">Funding Type</h3>
             <div className="flex flex-col gap-2">
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
+                <input onChange={() => alert('Filter Fully Funded toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">Fully Funded</span>
               </label>
               <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
+                <input onChange={() => alert('Filter Partial / Regional toggled')} type="checkbox" className="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" />
                 <span className="font-body-md text-on-surface group-hover:text-primary-container transition-colors">Partial / Regional</span>
               </label>
             </div>
@@ -180,7 +180,7 @@ const Scholarships: React.FC = () => {
             <label className="flex items-center justify-between cursor-pointer">
               <span className="font-label-bold text-on-surface">No IELTS Required</span>
               <div className="relative">
-                <input type="checkbox" className="sr-only peer" />
+                <input onChange={() => alert('Filter No IELTS toggled')} type="checkbox" className="sr-only peer" />
                 <div className="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
               </div>
             </label>

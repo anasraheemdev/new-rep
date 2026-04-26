@@ -74,7 +74,7 @@ const Roadmap: React.FC = () => {
             <p className="font-body-md text-body-md text-on-surface-variant ml-11 mb-4">Drafting SOPs, gathering LORs, and submitting final applications to selected universities.</p>
             {/* Mini progress or action inside active card */}
             <div className="ml-11 flex gap-3">
-              <button className="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-shadow">Review Documents</button>
+              <button onClick={() => alert('Review Documents triggered')} className="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-shadow">Review Documents</button>
             </div>
           </div>
         </div>

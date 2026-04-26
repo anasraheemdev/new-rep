@@ -34,8 +34,8 @@ const Settings: React.FC = () => {
                   <h3 className="font-label-bold text-label-bold text-on-background">Profile Photo</h3>
                   <p className="text-label-sm text-on-surface-variant mb-2">PNG, JPG up to 5MB</p>
                   <div className="flex gap-3">
-                    <button className="text-sm font-label-bold text-primary hover:text-primary/80 transition-colors">Upload New</button>
-                    <button className="text-sm font-label-bold text-error hover:text-error/80 transition-colors">Remove</button>
+                    <button onClick={() => alert('Upload New Profile Photo')} className="text-sm font-label-bold text-primary hover:text-primary/80 transition-colors">Upload New</button>
+                    <button onClick={() => alert('Remove Profile Photo')} className="text-sm font-label-bold text-error hover:text-error/80 transition-colors">Remove</button>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@ const Settings: React.FC = () => {
               </div>
 
               <div className="flex justify-end pt-4">
-                <button className="bg-primary-container text-on-primary-container hover:bg-primary-container/90 px-6 py-2.5 rounded-lg font-bold shadow-sm transition-all">Save Changes</button>
+                <button onClick={() => alert('Save Profile Changes')} className="bg-primary-container text-on-primary-container hover:bg-primary-container/90 px-6 py-2.5 rounded-lg font-bold shadow-sm transition-all">Save Changes</button>
               </div>
             </div>
           </section>
@@ -115,7 +115,7 @@ const Settings: React.FC = () => {
                     type="email"
                   />
                 </div>
-                <button className="bg-secondary text-on-secondary hover:bg-secondary/90 px-6 py-3 rounded-lg font-bold shadow-sm transition-all whitespace-nowrap">Invite</button>
+                <button onClick={() => alert('Invite Collaborator')} className="bg-secondary text-on-secondary hover:bg-secondary/90 px-6 py-3 rounded-lg font-bold shadow-sm transition-all whitespace-nowrap">Invite</button>
               </div>
 
               {/* Active Collaborators */}
@@ -134,7 +134,7 @@ const Settings: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-4">
                       <span className="text-xs font-label-bold text-outline border border-outline-variant px-2 py-1 rounded">View Only</span>
-                      <button className="text-outline hover:text-error transition-colors" title="Remove Access">
+                      <button onClick={() => alert('Remove Collaborator Access')} className="text-outline hover:text-error transition-colors" title="Remove Access">
                         <span className="material-symbols-outlined">delete</span>
                       </button>
                     </div>
@@ -160,7 +160,7 @@ const Settings: React.FC = () => {
                 <div>
                   <div className="font-label-bold text-on-background mb-1">WhatsApp Alerts</div>
                   <p className="text-sm text-on-surface-variant mb-3">Get real-time visa deadline and document status updates.</p>
-                  <button className="text-sm font-label-bold text-tertiary hover:text-tertiary/80 flex items-center gap-1 transition-colors">
+                  <button onClick={() => alert('Connect WhatsApp')} className="text-sm font-label-bold text-tertiary hover:text-tertiary/80 flex items-center gap-1 transition-colors">
                     Connect WhatsApp <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                   </button>
                 </div>
