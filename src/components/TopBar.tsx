@@ -17,6 +17,8 @@ const TopBar: React.FC = () => {
       case '/visa-interview': return 'Visa Interview Prep';
       case '/finance': return 'German Blocked Account';
       case '/compare': return 'University Comparison';
+      case '/pre-departure': return 'Pre-Departure Guide';
+      case '/marketplace': return 'Marketplace';
       case '/assistant': return 'AI Assistant';
       case '/settings': return 'Settings';
       default:

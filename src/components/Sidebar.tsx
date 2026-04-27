@@ -13,6 +13,8 @@ const navItems = [
   { path: '/visa-interview', label: 'Visa Prep', icon: 'assignment_ind' },
   { path: '/finance', label: 'Finance', icon: 'account_balance' },
   { path: '/assistant', label: 'AI Assistant', icon: 'smart_toy' },
+  { path: '/marketplace', label: 'Marketplace', icon: 'storefront' },
+  { path: '/pre-departure', label: 'Pre-Departure', icon: 'flight_takeoff' },
 ];
 
 const Sidebar: React.FC = () => {

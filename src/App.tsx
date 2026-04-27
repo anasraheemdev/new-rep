@@ -24,6 +24,19 @@ import OnboardingAspirations from './pages/OnboardingAspirations';
 import UniversityComparison from './pages/UniversityComparison';
 import VisaInterview from './pages/VisaInterview';
 import FinanceBlockedAccount from './pages/FinanceBlockedAccount';
+import PreDeparture from './pages/PreDeparture';
+import Marketplace from './pages/Marketplace';
+import AdminLayout from './layouts/AdminLayout';
+import AdminDashboard from './pages/AdminDashboard';
+import AdminStudentDirectory from './pages/AdminStudentDirectory';
+import AdminDocumentReview from './pages/AdminDocumentReview';
+import AdminContentManagement from './pages/AdminContentManagement';
+import AdminManualEntry from './pages/AdminManualEntry';
+import AdminFinanceQueue from './pages/AdminFinanceQueue';
+import AdminMarketing from './pages/AdminMarketing';
+import AdminPlatformAnalytics from './pages/AdminPlatformAnalytics';
+import AdminCounselorSupport from './pages/AdminCounselorSupport';
+import AdminPipelineManager from './pages/AdminPipelineManager';
 
 const App: React.FC = () => {
   return (
@@ -54,7 +67,24 @@ const App: React.FC = () => {
           <Route path="/visa-interview" element={<VisaInterview />} />
           <Route path="/finance" element={<FinanceBlockedAccount />} />
           <Route path="/compare" element={<UniversityComparison />} />
+          <Route path="/pre-departure" element={<PreDeparture />} />
+          <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/settings" element={<Settings />} />
+        </Route>
+
+        {/* Routes with Admin Layout */}
+        <Route element={<AdminLayout />}>
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/students" element={<AdminStudentDirectory />} />
+          <Route path="/admin/applications" element={<AdminContentManagement />} />
+          <Route path="/admin/documents" element={<AdminDocumentReview />} />
+          <Route path="/admin/finance" element={<AdminFinanceQueue />} />
+          <Route path="/admin/support" element={<AdminCounselorSupport />} />
+          <Route path="/admin/analytics" element={<AdminPlatformAnalytics />} />
+          <Route path="/admin/marketing" element={<AdminMarketing />} />
+          <Route path="/admin/counselors" element={<AdminCounselorSupport />} />
+          <Route path="/admin/pipeline" element={<AdminPipelineManager />} />
+          <Route path="/admin/manual-entry" element={<AdminManualEntry />} />
         </Route>
       </Routes>
     </BrowserRouter>
