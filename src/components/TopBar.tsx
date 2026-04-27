@@ -14,6 +14,9 @@ const TopBar: React.FC = () => {
       case '/documents': return 'Documents Hub';
       case '/visa-italy': return 'Italy Visa Guide';
       case '/visa-germany': return 'Germany Visa Guide';
+      case '/visa-interview': return 'Visa Interview Prep';
+      case '/finance': return 'German Blocked Account';
+      case '/compare': return 'University Comparison';
       case '/assistant': return 'AI Assistant';
       case '/settings': return 'Settings';
       default:

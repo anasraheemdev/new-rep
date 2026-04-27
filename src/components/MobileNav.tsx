@@ -40,15 +40,15 @@ const MobileNav: React.FC = () => {
         <span>Unis</span>
       </Link>
       <Link
-        to="/documents"
+        to="/finance"
         className={`flex flex-col items-center justify-center transition-transform duration-150 p-2 rounded-xl w-16 ${
-          location.pathname === '/documents'
+          location.pathname === '/finance'
             ? 'text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20'
             : 'text-gray-400 dark:text-gray-500 hover:text-blue-500 dark:hover:text-blue-300 active:scale-90'
         }`}
       >
-        <span className="material-symbols-outlined mb-1" style={{ fontVariationSettings: location.pathname === '/documents' ? "'FILL' 1" : "'FILL' 0" }}>description</span>
-        <span>Docs</span>
+        <span className="material-symbols-outlined mb-1" style={{ fontVariationSettings: location.pathname === '/finance' ? "'FILL' 1" : "'FILL' 0" }}>account_balance</span>
+        <span>Finance</span>
       </Link>
       <Link
         to="/settings"

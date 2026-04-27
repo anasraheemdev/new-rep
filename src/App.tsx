@@ -21,6 +21,9 @@ import OnboardingAcademic from './pages/OnboardingAcademic';
 import OnboardingProgress from './pages/OnboardingProgress';
 import OnboardingFinancial from './pages/OnboardingFinancial';
 import OnboardingAspirations from './pages/OnboardingAspirations';
+import UniversityComparison from './pages/UniversityComparison';
+import VisaInterview from './pages/VisaInterview';
+import FinanceBlockedAccount from './pages/FinanceBlockedAccount';
 
 const App: React.FC = () => {
   return (
@@ -48,6 +51,9 @@ const App: React.FC = () => {
           <Route path="/scholarships/:id" element={<ScholarshipDetails />} />
           <Route path="/visa-italy" element={<VisaGuideItaly />} />
           <Route path="/visa-germany" element={<VisaGuideGermany />} />
+          <Route path="/visa-interview" element={<VisaInterview />} />
+          <Route path="/finance" element={<FinanceBlockedAccount />} />
+          <Route path="/compare" element={<UniversityComparison />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>

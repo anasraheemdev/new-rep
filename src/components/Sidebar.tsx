@@ -5,10 +5,13 @@ const navItems = [
   { path: '/dashboard', label: 'Dashboard', icon: 'dashboard' },
   { path: '/roadmap', label: 'My Journey', icon: 'map' },
   { path: '/universities', label: 'Universities', icon: 'school' },
+  { path: '/compare', label: 'Compare Unis', icon: 'compare_arrows' },
   { path: '/scholarships', label: 'Scholarships', icon: 'payments' },
   { path: '/application-steps', label: 'Application Steps', icon: 'assignment' },
   { path: '/documents', label: 'Documents', icon: 'description' },
   { path: '/visa-italy', label: 'Visa Guide', icon: 'receipt_long' },
+  { path: '/visa-interview', label: 'Visa Prep', icon: 'assignment_ind' },
+  { path: '/finance', label: 'Finance', icon: 'account_balance' },
   { path: '/assistant', label: 'AI Assistant', icon: 'smart_toy' },
 ];
 
