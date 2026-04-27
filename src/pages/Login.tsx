@@ -73,7 +73,14 @@ const Login: React.FC = () => {
               className="w-full h-12 mt-sm bg-primary text-on-primary rounded-lg font-label-bold text-label-bold shadow-sm hover:shadow-md hover:bg-on-primary-fixed-variant transition-all active:scale-[0.98]"
               type="submit"
             >
-              Sign In
+              Sign In as Student
+            </button>
+            <button
+              className="w-full h-12 mt-sm bg-surface-container-high text-on-surface rounded-lg font-label-bold text-label-bold shadow-sm hover:shadow-md hover:bg-surface-dim transition-all active:scale-[0.98]"
+              type="button"
+              onClick={() => navigate('/admin/dashboard')}
+            >
+              Sign In as Admin
             </button>
           </form>
 

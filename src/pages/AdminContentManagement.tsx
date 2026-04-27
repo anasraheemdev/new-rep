@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AdminContentManagement: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 p-6 lg:p-10 lg:pt-12 max-w-7xl mx-auto w-full">
       {/* Page Header & Quick Actions */}
@@ -10,11 +12,11 @@ const AdminContentManagement: React.FC = () => {
           <p className="font-body-md text-body-md text-on-surface-variant">Real-time status of university data and scraping pipelines.</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <button onClick={() => alert('Add University')} className="bg-surface border border-outline-variant text-primary font-label-bold text-label-bold py-2.5 px-4 rounded-xl hover:bg-surface-container-low transition-colors flex items-center gap-2">
+          <button onClick={() => navigate('/admin/manual-entry')} className="bg-surface border border-outline-variant text-primary font-label-bold text-label-bold py-2.5 px-4 rounded-xl hover:bg-surface-container-low transition-colors flex items-center gap-2">
             <span className="material-symbols-outlined text-[18px]">domain_add</span>
             Add University
           </button>
-          <button onClick={() => alert('Add Scholarship')} className="bg-surface border border-outline-variant text-primary font-label-bold text-label-bold py-2.5 px-4 rounded-xl hover:bg-surface-container-low transition-colors flex items-center gap-2">
+          <button onClick={() => navigate('/admin/manual-entry')} className="bg-surface border border-outline-variant text-primary font-label-bold text-label-bold py-2.5 px-4 rounded-xl hover:bg-surface-container-low transition-colors flex items-center gap-2">
             <span className="material-symbols-outlined text-[18px]">post_add</span>
             Add Scholarship
           </button>
@@ -77,7 +79,7 @@ const AdminContentManagement: React.FC = () => {
               <span className="material-symbols-outlined text-primary-container">memory</span>
               Active AI Pipelines
             </h3>
-            <button onClick={() => alert('View All Tasks')} className="text-primary font-label-bold text-label-bold hover:underline">View All Tasks</button>
+            <button onClick={() => navigate('/admin/pipeline')} className="text-primary font-label-bold text-label-bold hover:underline">View All Tasks</button>
           </div>
           <div className="space-y-5">
             {/* Task 1 */}

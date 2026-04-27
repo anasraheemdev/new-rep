@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 overflow-y-auto p-margin-mobile md:p-xl bg-background pb-32">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-lg">
@@ -34,7 +35,7 @@ const Dashboard: React.FC = () => {
               </div>
               <h2 className="font-headline-md text-headline-md mb-2">Ready for your next step?</h2>
               <p className="font-body-md text-body-md text-blue-100 mb-6">Upload your IELTS Test Report Form (TRF) to complete your profile and start applying to universities.</p>
-              <button onClick={() => alert('Upload IELTS TRF triggered')} className="bg-white text-trust-blue font-label-bold text-label-bold px-6 py-3 rounded-lg shadow-sm hover:bg-blue-50 transition-colors flex items-center gap-2 active:scale-95 duration-150">
+              <button onClick={() => navigate('/documents')} className="bg-white text-trust-blue font-label-bold text-label-bold px-6 py-3 rounded-lg shadow-sm hover:bg-blue-50 transition-colors flex items-center gap-2 active:scale-95 duration-150">
                 <span className="material-symbols-outlined">upload_file</span>
                 Upload IELTS TRF
               </button>
@@ -145,7 +146,7 @@ const Dashboard: React.FC = () => {
             <div className="relative z-10">
               <h3 className="font-headline-sm text-headline-sm text-on-secondary-fixed mb-2">Need a hand?</h3>
               <p className="font-body-md text-body-md text-on-secondary-fixed-variant mb-4">Our immigration experts are ready to review your documents.</p>
-              <button onClick={() => alert('Book Consultation triggered')} className="bg-white text-secondary-container font-label-bold text-label-bold px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors w-full text-center">
+              <button onClick={() => navigate('/assistant')} className="bg-white text-secondary-container font-label-bold text-label-bold px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors w-full text-center">
                 Book Consultation
               </button>
             </div>

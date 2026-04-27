@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PreDeparture: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 w-full max-w-max-width mx-auto px-margin-mobile py-xl pb-24 md:pb-xl space-y-xl">
       {/* Hero / Milestone Section */}
@@ -101,7 +103,7 @@ const PreDeparture: React.FC = () => {
             <div className="flex-1">
               <h3 className="font-label-bold text-label-bold text-on-surface">Confirm Airport Pickup</h3>
               <p className="font-body-md text-body-md text-on-surface-variant mt-1">Your buddy, Felix, needs your exact terminal arrival to coordinate.</p>
-              <button onClick={() => alert('Message Felix triggered')} className="mt-sm bg-primary-container text-on-primary-container font-label-bold text-label-bold px-4 py-2 rounded-lg text-sm hover:opacity-90 transition-opacity">Message Felix</button>
+              <button onClick={() => navigate('/assistant')} className="mt-sm bg-primary-container text-on-primary-container font-label-bold text-label-bold px-4 py-2 rounded-lg text-sm hover:opacity-90 transition-opacity">Message Felix</button>
             </div>
           </div>
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const UniversityDetails: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 w-full pb-24 md:pb-8">
       {/* Hero Section */}
@@ -32,11 +33,11 @@ const UniversityDetails: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 md:px-8 py-8 md:pl-12">
         {/* Action Bar Mobile */}
         <div className="md:hidden flex gap-3 mb-6">
-          <button onClick={() => alert('Add to My Journey triggered')} className="flex-1 bg-primary-container text-on-primary-container font-label-bold py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2">
+          <button onClick={() => navigate('/roadmap')} className="flex-1 bg-primary-container text-on-primary-container font-label-bold py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2">
             <span className="material-symbols-outlined text-[18px]">add</span>
             Add to My Journey
           </button>
-          <button onClick={() => alert('Check Eligibility triggered')} className="flex-1 border border-outline-variant text-primary font-label-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
+          <button onClick={() => navigate('/assistant')} className="flex-1 border border-outline-variant text-primary font-label-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
             Check Eligibility
           </button>
         </div>
@@ -126,11 +127,11 @@ const UniversityDetails: React.FC = () => {
           <div className="space-y-6">
             {/* Action Bar Desktop */}
             <div className="hidden md:flex flex-col gap-3">
-              <button onClick={() => alert('Add to My Journey triggered')} className="w-full bg-primary-container text-on-primary-container font-label-bold py-3 px-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center gap-2">
+              <button onClick={() => navigate('/roadmap')} className="w-full bg-primary-container text-on-primary-container font-label-bold py-3 px-4 rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-center gap-2">
                 <span className="material-symbols-outlined text-[18px]">add</span>
                 Add to My Journey
               </button>
-              <button onClick={() => alert('Check Eligibility triggered')} className="w-full border border-primary-container text-primary-container hover:bg-primary-fixed transition-colors font-label-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
+              <button onClick={() => navigate('/assistant')} className="w-full border border-primary-container text-primary-container hover:bg-primary-fixed transition-colors font-label-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2">
                 Check Eligibility
               </button>
             </div>

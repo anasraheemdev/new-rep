@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AdminPipelineManager: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 p-6 md:p-8 overflow-y-auto w-full max-w-[1400px] mx-auto bg-background">
       <div className="mb-8 flex justify-between items-end">
@@ -74,7 +76,7 @@ const AdminPipelineManager: React.FC = () => {
                 <span className="material-symbols-outlined text-outline">settings_ethernet</span>
                 <h3 className="font-headline-sm text-on-surface">Source Configuration</h3>
               </div>
-              <button onClick={() => alert('Add New Source')} className="text-primary font-label-bold hover:underline text-sm">Add Source</button>
+              <button onClick={() => navigate('/admin/manual-entry')} className="text-primary font-label-bold hover:underline text-sm">Add Source</button>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
@@ -216,7 +218,7 @@ const AdminPipelineManager: React.FC = () => {
                 <div className="text-xs text-outline font-mono truncate">ID: TUM-205 | Source: tum.de</div>
               </div>
             </div>
-            <button onClick={() => alert('View Full AI Queue')} className="w-full mt-4 py-2 text-sm font-label-bold text-primary hover:bg-surface-container-low rounded transition-colors">View Full Queue</button>
+            <button onClick={() => navigate('/admin/applications')} className="w-full mt-4 py-2 text-sm font-label-bold text-primary hover:bg-surface-container-low rounded transition-colors">View Full Queue</button>
           </div>
 
           {/* Verification Queue */}

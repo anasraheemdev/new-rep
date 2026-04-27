@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AdminStudentDirectory: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 p-6 lg:p-8 max-w-7xl mx-auto w-full">
       {/* Page Header & Filters */}
@@ -9,7 +11,7 @@ const AdminStudentDirectory: React.FC = () => {
           <h2 className="font-headline-md text-headline-md text-on-surface mb-1">Student Directory</h2>
           <p className="font-body-md text-body-md text-on-surface-variant">Manage and track student progress across 142 active applications.</p>
         </div>
-        <button onClick={() => alert('New Student')} className="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-bold text-label-bold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-2 self-start md:self-auto">
+        <button onClick={() => navigate('/admin/manual-entry')} className="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-bold text-label-bold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-2 self-start md:self-auto">
           <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>add</span>
           New Student
         </button>
@@ -100,13 +102,13 @@ const AdminStudentDirectory: React.FC = () => {
             Today, 10:42 AM
           </div>
           <div className="col-span-2 flex justify-end gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onClick={() => alert('Message Student')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Message">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/support') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Message">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>chat</span>
             </button>
-            <button onClick={() => alert('Review Docs')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Review Docs">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/documents') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Review Docs">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>folder_open</span>
             </button>
-            <button onClick={() => alert('Assign Counselor')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Assign Counselor">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/counselors') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Assign Counselor">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>person_add</span>
             </button>
           </div>
@@ -138,13 +140,13 @@ const AdminStudentDirectory: React.FC = () => {
             Yesterday
           </div>
           <div className="col-span-2 flex justify-end gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onClick={() => alert('Message Student')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Message">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/support') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Message">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>chat</span>
             </button>
-            <button onClick={() => alert('Review Docs')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Review Docs">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/documents') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Review Docs">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>folder_open</span>
             </button>
-            <button onClick={() => alert('Assign Counselor')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Assign Counselor">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/counselors') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Assign Counselor">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>person_add</span>
             </button>
           </div>
@@ -176,13 +178,13 @@ const AdminStudentDirectory: React.FC = () => {
             Oct 24, 2023
           </div>
           <div className="col-span-2 flex justify-end gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
-            <button onClick={() => alert('Message Student')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Message">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/support') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Message">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>chat</span>
             </button>
-            <button onClick={() => alert('Review Docs')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Review Docs">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/documents') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Review Docs">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>folder_open</span>
             </button>
-            <button onClick={() => alert('Assign Counselor')} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Assign Counselor">
+            <button onClick={(e) => { e.stopPropagation(); navigate('/admin/counselors') }} className="p-1.5 text-on-surface-variant hover:text-primary hover:bg-primary-fixed rounded-md transition-colors" title="Assign Counselor">
               <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>person_add</span>
             </button>
           </div>

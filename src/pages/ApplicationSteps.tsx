@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ApplicationSteps: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 p-margin-mobile md:p-xl w-full max-w-[800px] mx-auto pb-32">
       {/* Header Section */}
@@ -22,7 +24,7 @@ const ApplicationSteps: React.FC = () => {
             <p className="font-label-sm text-label-sm text-on-surface-variant">You're on track for the Fall semester.</p>
           </div>
         </div>
-        <button onClick={() => alert('Overview triggered')} className="hidden sm:flex px-md py-sm bg-surface-container-high hover:bg-surface-dim transition-colors rounded-lg font-label-bold text-label-bold text-on-surface items-center gap-xs">
+        <button onClick={() => navigate('/roadmap')} className="hidden sm:flex px-md py-sm bg-surface-container-high hover:bg-surface-dim transition-colors rounded-lg font-label-bold text-label-bold text-on-surface items-center gap-xs">
           <span className="material-symbols-outlined text-sm">visibility</span>
           Overview
         </button>
@@ -135,7 +137,7 @@ const ApplicationSteps: React.FC = () => {
                 </ul>
 
                 {/* Dropzone */}
-                <div onClick={() => alert('File upload triggered')} className="border-2 border-dashed border-outline-variant hover:border-primary transition-colors rounded-lg p-md flex flex-col items-center justify-center text-center cursor-pointer bg-surface-container-lowest">
+                <div onClick={() => navigate('/documents')} className="border-2 border-dashed border-outline-variant hover:border-primary transition-colors rounded-lg p-md flex flex-col items-center justify-center text-center cursor-pointer bg-surface-container-lowest">
                   <span className="material-symbols-outlined text-outline mb-xs">cloud_upload</span>
                   <p className="font-label-bold text-label-bold text-on-surface">Click to upload or drag and drop</p>
                   <p className="font-label-sm text-label-sm text-on-surface-variant mt-1">PDF, JPG up to 5MB</p>

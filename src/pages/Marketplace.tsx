@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Marketplace: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 w-full max-w-screen-xl mx-auto p-margin-mobile md:p-xl pb-24 md:pb-xl">
       <div className="max-w-[800px] mx-auto">
@@ -11,7 +13,7 @@ const Marketplace: React.FC = () => {
         </div>
 
         {/* Secure Upload Bento Card */}
-        <div onClick={() => alert('Document upload initiated')} className="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 p-lg mb-xl relative overflow-hidden cursor-pointer hover:border-primary-container/50 transition-colors">
+        <div onClick={() => navigate('/documents')} className="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 p-lg mb-xl relative overflow-hidden cursor-pointer hover:border-primary-container/50 transition-colors">
           <div className="absolute top-0 right-0 p-md opacity-10 pointer-events-none">
             <span className="material-symbols-outlined text-[120px]" style={{ fontVariationSettings: "'FILL' 1" }}>security</span>
           </div>

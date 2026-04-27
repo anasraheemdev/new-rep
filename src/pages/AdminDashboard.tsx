@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="p-6 lg:p-10 max-w-7xl mx-auto w-full space-y-lg">
       <div className="flex justify-between items-end mb-6">
@@ -97,11 +99,11 @@ const AdminDashboard: React.FC = () => {
               </div>
               <h3 className="font-headline-md text-headline-md text-on-surface">Urgent Task Queue</h3>
             </div>
-            <button onClick={() => alert('View All Tasks')} className="font-label-bold text-label-bold text-primary-container hover:underline">View All</button>
+            <button onClick={() => navigate('/admin/pipeline')} className="font-label-bold text-label-bold text-primary-container hover:underline">View All</button>
           </div>
           <div className="p-0 flex-1">
             <ul className="divide-y divide-outline-variant/20">
-              <li onClick={() => alert('View Urgent Task')} className="p-4 md:p-6 hover:bg-surface-container-low transition-colors flex flex-col sm:flex-row gap-4 sm:items-center justify-between group cursor-pointer">
+              <li onClick={() => navigate('/admin/documents')} className="p-4 md:p-6 hover:bg-surface-container-low transition-colors flex flex-col sm:flex-row gap-4 sm:items-center justify-between group cursor-pointer">
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-surface-container flex-shrink-0 overflow-hidden">
                     <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB-2IPTBkuFahZOSpRDixQOXJKwwdel4tfwfrdZX2JdGoEE5NTB7XAPKppGs3HZqCTMZemWHuups-UoI1NkC3FA_kj12lkOGZAga5hvPhg2wJGR8cSG3iolCx2biwZs0FNXCFaD_YsNUS7KbrycID1y1zuCPEuPd7ZAD2uRzGNMLoa9wwVCPrPziS_uq5qEX-0dr1tBTKJ6EeB6gpv2zCkuv7j2Z_TGW-QBhL9P1yUjbFT9xMe0dOMn0jKICCvNj1wrHabXjHG4FgA" alt="Student Profile" />
@@ -116,10 +118,10 @@ const AdminDashboard: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex gap-2 mt-2 sm:mt-0 sm:opacity-0 group-hover:opacity-100 transition-opacity">
-                  <button onClick={() => alert('View Document')} className="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="View Document">
+                  <button onClick={(e) => { e.stopPropagation(); navigate('/admin/documents'); }} className="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" title="View Document">
                     <span className="material-symbols-outlined">visibility</span>
                   </button>
-                  <button onClick={() => alert('Review Document')} className="px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-bold text-label-bold shadow-sm hover:shadow-md transition-shadow">
+                  <button onClick={(e) => { e.stopPropagation(); navigate('/admin/documents'); }} className="px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-bold text-label-bold shadow-sm hover:shadow-md transition-shadow">
                     Review
                   </button>
                 </div>
@@ -163,7 +165,7 @@ const AdminDashboard: React.FC = () => {
                 <p className="font-body-md text-body-md text-on-surface"><span className="font-bold">Visa Approved:</span> Sarah Jenkins received her German Student Visa.</p>
               </div>
             </div>
-            <button onClick={() => alert('View Full Timeline')} className="mt-6 w-full py-2 text-center font-label-bold text-label-bold text-primary-container border border-outline-variant/30 rounded-lg hover:bg-surface-container-low transition-colors">
+            <button onClick={() => navigate('/admin/analytics')} className="mt-6 w-full py-2 text-center font-label-bold text-label-bold text-primary-container border border-outline-variant/30 rounded-lg hover:bg-surface-container-low transition-colors">
               View Full Timeline
             </button>
           </div>

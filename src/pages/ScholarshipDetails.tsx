@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ScholarshipDetails: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <main className="flex-1 overflow-y-auto p-margin-mobile md:p-8 flex justify-center pb-24 md:pb-8 w-full">
       <div className="w-full max-w-4xl flex flex-col gap-lg">
@@ -122,7 +124,7 @@ const ScholarshipDetails: React.FC = () => {
                 <p className="font-label-sm text-error font-bold tracking-wide uppercase">Deadline Approaching</p>
                 <p className="font-headline-sm text-on-surface">Closes: Sep 06, 2024</p>
               </div>
-              <button onClick={() => alert('Apply Now triggered')} className="w-full py-3.5 px-4 bg-primary-container text-on-primary-container rounded-xl font-label-bold text-base hover:opacity-90 hover:shadow-md transition-all shadow-sm flex justify-center items-center gap-2">
+              <button onClick={() => navigate('/application-steps')} className="w-full py-3.5 px-4 bg-primary-container text-on-primary-container rounded-xl font-label-bold text-base hover:opacity-90 hover:shadow-md transition-all shadow-sm flex justify-center items-center gap-2">
                 Apply Now
                 <span className="material-symbols-outlined text-sm">open_in_new</span>
               </button>
